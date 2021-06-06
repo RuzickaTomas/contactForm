@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome</title>
+</head>
+<body>
+	<h1>Welcome</h1>
+	<p>Welcome to starter page of contact form server please proceed your communication via REST API</p>
+	
+	<p><code>GET</code></p>
+	<p>Check out if server works fine</p>
+	<a href="/contactForm/v1/test">test purpose only</a>
+	
+	<p><code>POST</code></p>
+	<p>Create new customer message message structure should be following 
+		<code>{"kindOfRequest": "Complaint", "policyNumber" : "ABCD123", "name": "Jan", "surname" : "Novák", "request" : "test message"} </code>
+	</p>
+	<a href="/contactForm/v1/create">create new customer message</a>
+	
+</body>
+</html>
