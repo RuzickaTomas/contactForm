@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Lundegaard - customer form</title>
+<link rel="stylesheet" href="./css/customerForm.css"  />
+</head>
+<body>
+
+<h1>Contact us</h1>
+<script src="./js/jquery.max.js"></script>	
+
+<div id="formWrap">
+<form id="customerForm" method="POST">
+
+<label>Kind of Request</label>
+<select name="kindOfRequest" id="kindOfRequest" required="true">
+  <option value="Contact Adjustment">Contact Adjustment</option>
+  <option value="Damage Case">Damage Case</option>
+  <option value="Complaint">Complaint</option>
+</select>
+
+<label>Policy Number</label>
+<input type="text" name="policyNumber" required="true" />
+
+<label>Name</label>
+<input type="text" name="name" required="true" />
+
+<label>Surname</label>
+<input type="text" name="surname" required="true" />
+
+<label>Your request</label>
+<textarea name="request" form="customerForm" maxlength="250" required="true"></textarea>
+
+<table>
+<tr>
+<td></td>
+<td><input type="submit" value="Send request" /></td>
+</tr>
+</table>
+</form>
+</div>
+
+<script>
+	//on button submit is pressed get values from input, then send them to destination
+	$("#customerForm").submit(function(e) {
+	//prevent of default submit behavior - dont send empty form
+	e.preventDefault();
+
+	let kindOfRequestValue = $("select[name='kindOfRequest']").val();
+	console.log(kindOfRequestValue);
+	let policyNumberValue = $("input[name='policyNumber']").val();
+	console.log(policyNumberValue);
+	let nameValue = $("input[name='name']").val();
+	console.log(nameValue);
+	let surnameValue = $("input[name='surname']").val();
+	console.log(surnameValue);
+	let requestValue = $("textarea[name='request']").val();
+	console.log(requestValue);
+	$.ajax({
+		url: "http://localhost:8080/contactForm/v1/create",
+		type : 'POST',
+		contentType : 'application/json',
+		crossDomain: true,
+		data: JSON.stringify( {"kindOfRequest": kindOfRequestValue, "policyNumber" : policyNumberValue, "name": nameValue, "surname" : surnameValue, "request" : requestValue})
+		,success: function(result) {
+		console.log(JSON.stringify(result) + '++');
+	}
+	
+	});
+
+	}); 
+	
+
+	</script>
+
+</body>
+</html> 
