@@ -1,0 +1,39 @@
+h1 {
+text-align: center;
+}
+
+#formWrap {
+	margin: 0 auto;
+	width:50%;
+	padding: 1em;
+	background-color: #efefef;
+	position relative;
+}
+
+#customerForm select {
+	margin: 0 auto;
+	padding: 0.5em;
+	margin-top: 2px;
+	width: 210px;
+	display: block;
+}
+
+#customerForm label, input, textarea {
+	margin: 0 auto;
+	margin-top: 2px;
+	padding-top: 0.5em;
+	width: 200px;
+	display: block;
+}
+#customerForm table{
+	margin: 0 auto;
+}
+
+#customerForm table tr td{
+	width: 100px;
+}
+
+#customerForm input[type="submit"] {
+	width: 100px;
+	background-color: lightblue;
+}

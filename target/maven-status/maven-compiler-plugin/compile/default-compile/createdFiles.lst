@@ -1,7 +1,8 @@
-cz/contactform/entity/ContactForm.class
 cz/contactform/controller/FormController.class
 cz/contactform/service/ContactFormService.class
-cz/contactform/RunApplication.class
 cz/contactform/dto/ContactFormDto.class
 cz/contactform/enumeration/KindOfRequest.class
+cz/contactform/entity/ContactForm.class
+cz/contactform/RunApplication.class
+cz/contactform/converter/StringToEnumConverter.class
 cz/contactform/repo/ContactFormRepository.class

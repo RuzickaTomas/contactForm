@@ -29,7 +29,7 @@ public class FormController {
 	
 	@CrossOrigin(origins = "http://localhost:8080")
 	@PostMapping(value =  "/create")
-	public ResponseEntity<String> create(@RequestBody ContactFormDto data) {
+	public ResponseEntity<String> create(@RequestBody @Validated ContactFormDto data) {
 		ContactFormDto result = service.create(data);
 		if (Objects.nonNull(result)) {
 			return ResponseEntity.ok("Form data saved");

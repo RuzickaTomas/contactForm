@@ -1,32 +1,32 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Lundegaard - customer form</title>
-<link rel="stylesheet" href="./css/customerForm.css"  />
+<link rel="stylesheet" href="/css/customerForm.css"  />
 </head>
 <body>
 
 <h1>Contact us</h1>
-<script src="./js/jquery.max.js"></script>	
+<script src="/js/jquery.max.js"></script>	
 
 <div id="formWrap">
 <form id="customerForm" method="POST">
 
 <label>Kind of Request</label>
-<select name="kindOfRequest" id="kindOfRequest" required="true">
+<select name="kindOfRequest" id="kindOfRequest">
   <option value="Contact Adjustment">Contact Adjustment</option>
   <option value="Damage Case">Damage Case</option>
   <option value="Complaint">Complaint</option>
 </select>
 
 <label>Policy Number</label>
-<input type="text" name="policyNumber" required="true" />
+<input type="text" name="policyNumber" required="true" pattern="^[a-zA-Z0-9]{4,10}$" />
 
 <label>Name</label>
-<input type="text" name="name" required="true" />
+<input type="text" name="name" required="true" pattern="^[a-zA-Z0-9]{4,10}$" />
 
 <label>Surname</label>
-<input type="text" name="surname" required="true" />
+<input type="text" name="surname" required="true" pattern="^[a-zA-Z0-9]{4,10}$" />
 
 <label>Your request</label>
 <textarea name="request" form="customerForm" maxlength="250" required="true"></textarea>

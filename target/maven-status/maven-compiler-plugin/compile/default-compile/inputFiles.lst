@@ -1,5 +1,6 @@
 /home/tomas/devtools/workspace-2021/contactForm/src/main/java/cz/contactform/repo/ContactFormRepository.java
 /home/tomas/devtools/workspace-2021/contactForm/src/main/java/cz/contactform/dto/ContactFormDto.java
+/home/tomas/devtools/workspace-2021/contactForm/src/main/java/cz/contactform/converter/StringToEnumConverter.java
 /home/tomas/devtools/workspace-2021/contactForm/src/main/java/cz/contactform/enumeration/KindOfRequest.java
 /home/tomas/devtools/workspace-2021/contactForm/src/main/java/cz/contactform/entity/ContactForm.java
 /home/tomas/devtools/workspace-2021/contactForm/src/main/java/cz/contactform/controller/FormController.java
